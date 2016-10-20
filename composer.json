@@ -1,0 +1,21 @@
+{
+    "name": "bizhub/impersonate",
+    "version": "0.1",
+    "description": "Impersonate a Laravel user",
+    "keywords": ["bizhub", "laravel", "impersonate"],
+    "license": "MIT",
+    "homepage": "http://bizhub.co.nz",
+    "authors": [
+        {
+            "name": "Lex van der Woude",
+            "email": "lex@bizhub.co.nz"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "autoload": {
+        "psr-4": { "Bizhub\\Impersonate\\": "src/" }
+    },
+    "minimum-stability": "dev"
+}
