@@ -10,7 +10,7 @@ trait CanImpersonate
 {
 	public function impersonate()
     {
-        if (!$this->isImpersonating()) {
+        if ($this->isImpersonating()) {
             throw new Exception('You must stop impersonating before impersonating another user.');
         }
         if (!Auth::check()) {
