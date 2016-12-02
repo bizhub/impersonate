@@ -19,13 +19,13 @@ trait CanImpersonate
         Session::put('impersonator', Auth::id());
         Session::put('impersonate', $this->id);
 
-        $this->resetSessionKey( $this->id );
+        $this->resetSessionKey($this->id);
     }
 
     public function stopImpersonating()
     {
         if (Session::has('impersonator')) {
-            $this->resetSessionKey( Session::get('impersonator') );
+            $this->resetSessionKey(Session::get('impersonator'));
             Session::forget('impersonator');
         }
         Session::forget('impersonate');
@@ -36,9 +36,10 @@ trait CanImpersonate
         return Session::has('impersonate');
     }
 
-    public function impersonator() {
+    public function impersonator()
+    {
         if ($this->isImpersonating()) {
-            return self::find( Session::get('impersonator') );
+            return self::find(Session::get('impersonator'));
         }
         return null;
     }
@@ -48,7 +49,8 @@ trait CanImpersonate
      *
      * @param $id
      */
-    protected function resetSessionKey($id) {
+    protected function resetSessionKey($id)
+    {
         $session_key = Auth::getName();
         if ($session_key) {
             Session::put($session_key, $id);
