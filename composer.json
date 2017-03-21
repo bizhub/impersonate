@@ -1,6 +1,6 @@
 {
     "name": "bizhub/impersonate",
-    "version": "0.1",
+    "version": "0.2",
     "description": "Impersonate a Laravel user",
     "keywords": ["bizhub", "laravel", "impersonate"],
     "license": "MIT",
